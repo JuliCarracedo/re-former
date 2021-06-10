@@ -1,0 +1,17 @@
+  <%= form_with model: @user do |form| %>
+<div>
+  <div>
+    <%= form.label :username %><br>
+    <%= form.text_field :username, placeholder: "Your user name here"%>
+  </div>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.email_field :email, placeholder: "example@exam.com"%>
+  </div>
+    <%= form.label :password %><br>
+    <%= form.password_field :password %>
+  <div>
+    <%= form.submit %>
+  </div>
+  <% end %>
+</div>
