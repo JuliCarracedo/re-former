@@ -1,1 +1,10 @@
 <h1>HolaMundo</h1>
+
+<%@users.each do |user|%>
+<%=user.username%><br>
+<%=user.email%><br>
+<%=user.id%>
+<%= link_to "Edit", edit_users_path(User.find(user.id))%>
+<br><br>
+<%end%>
+<%= link_to "new", new_users_path %>
